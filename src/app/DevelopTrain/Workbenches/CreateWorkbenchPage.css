@@ -1,0 +1,20 @@
+.create-workbench-page__wizard-section {
+  /* Give the wizard area a larger canvas so it doesn't hug the content */
+  padding-bottom: 0;
+}
+
+.create-workbench-page__wizard {
+  /* Increase available vertical space */
+  min-height: 600px;
+}
+
+/* Specifically target the section you called out */
+.create-workbench-page__wizard .pf-v6-c-wizard__inner-wrap {
+  min-height: 600px;
+}
+
+/* Add a bit more room beneath the content without changing the content itself */
+.create-workbench-page__wizard .pf-v6-c-wizard__main-body {
+  padding-bottom: var(--pf-v6-global--spacer--2xl);
+}
+

@@ -1,0 +1,36 @@
+**/node_modules
+dist
+yarn-error.log
+yarn.lock
+stats.json
+coverage
+storybook-static
+.DS_Store
+.idea
+.history
+.netlify
+.vercel
+.vscode
+nvmrc
+
+# Cursor IDE — ignore generated plans/settings, keep rules and MCP config
+.cursor/plans/
+.cursor/settings.json
+
+# Local Claude Code settings
+
+# Generated decision documents
+.decisions/
+
+# Playwright MCP screenshots
+
+# MCP configuration with sensitive data
+
+# Documentation summaries
+*_SUMMARY.md
+CAPABILITIES_CARD_LAYOUTS.md
+HOME_VARIATIONS_SUMMARY.md
+
+# Git SSL certificate bundles (local configuration)
+.git_cert_bundle.pem
+redhat_gitlab_cert.pem

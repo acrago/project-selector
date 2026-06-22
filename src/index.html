@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <title>RHOAI 3.5 Prototype</title>
+  <meta id="appName" name="application-name" content="Patternfly Seed">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.png">
+  <base href="<%= basePath %>">
+  <meta name="base-path" content="<%= basePath %>">
+</head>
+
+<body>
+  <noscript>Enabling JavaScript is required to run this app.</noscript>
+  <div id="root"></div>
+
+  <!-- Figma Capture Script -->
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+
+  <!-- Apollo Analytics: Set endpoint and load tracker -->
+  <script>
+    // Configure Apollo Analytics endpoint (update for production)
+    // Leave empty or remove to disable analytics
+    window.APOLLO_ANALYTICS_ENDPOINT = "https://apollo-analytics-apollo-analytics.apps.rosa.uxdpoc7.9hji.p3.openshiftapps.com";  // e.g., "https://apollo-analytics.apps.your-cluster.com"
+  </script>
+  <script src="lib/tracker.js"></script>
+</body>
+
+</html>

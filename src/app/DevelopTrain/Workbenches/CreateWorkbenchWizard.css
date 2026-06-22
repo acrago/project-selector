@@ -1,0 +1,69 @@
+/* Styles for Create Workbench Wizard Modal */
+
+/* Remove duplicate close buttons - keep only the WizardHeader close button */
+.create-workbench-wizard-modal .pf-v6-c-modal-box__close {
+  display: none !important;
+}
+
+/* Ensure modal has consistent sizing */
+.create-workbench-wizard-modal .pf-v6-c-modal-box {
+  max-width: 100%;
+  width: auto;
+  /* Let the modal size to content so we don't get internal scrollbars */
+  height: auto !important;
+  max-height: none !important;
+  /* But still give the wizard a canvas so the left nav can reach the bottom */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure wizard fills the modal */
+.create-workbench-wizard-modal .pf-v6-c-wizard {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  height: auto !important;
+  display: flex;
+  flex-direction: column;
+  /* Provides consistent height so nav can stretch to the footer */
+  min-height: 600px;
+}
+
+/* Remove modal body scrolling (PatternFly defaults to overflow-y: auto) */
+.create-workbench-wizard-modal .pf-v6-c-modal-box__body {
+  overflow: visible !important;
+  max-height: none !important;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+/* Also remove wizard internal scrolling */
+.create-workbench-wizard-modal .pf-v6-c-wizard__main-body {
+  overflow: visible !important;
+}
+
+/* Don’t force 100% heights inside the modal, it tends to create overflow */
+.create-workbench-wizard-modal .pf-v6-c-wizard__outer-wrap,
+.create-workbench-wizard-modal .pf-v6-c-wizard__main {
+  min-height: 0 !important;
+}
+
+/* Make the nav + main region fill the available space above the footer */
+.create-workbench-wizard-modal .pf-v6-c-wizard__outer-wrap {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.create-workbench-wizard-modal .pf-v6-c-wizard__inner-wrap {
+  flex: 1 1 auto;
+  min-height: 0;
+  align-items: stretch;
+}
+
+.create-workbench-wizard-modal .pf-v6-c-wizard__nav {
+  align-self: stretch;
+  height: 100%;
+}

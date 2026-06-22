@@ -1,0 +1,604 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* Low fidelity mode styling — scoped to #prototype so it doesn't affect the context panel or prototype masthead */
+#prototype.fidelity-low {
+  font-family: "Comic Sans MS", "Comic Sans", cursive !important;
+  filter: grayscale(100%);
+}
+
+#prototype.fidelity-low * {
+  font-family: "Comic Sans MS", "Comic Sans", cursive !important;
+}
+
+#context-panel-toggle-btn svg {
+  color: white;
+}
+
+#prototype-feature-flags-item button:hover {
+  color: white;
+}
+
+#prototype-fidelity-item button,
+#prototype-fidelity-item .pf-v6-c-menu-toggle__toggle-icon {
+  color: white;
+}
+
+#prototype-fidelity-item button:hover {
+  color: white;
+}
+
+#prototype-masthead {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.pf-v6-c-masthead__logo {
+  width: 60px;
+}
+
+.pf-v6-c-masthead .pf-v6-c-toolbar__content-section {
+  align-items: center !important;
+}
+
+#apollo-canvas-masthead h1 {
+  margin: 6px;
+}
+
+#apollo-canvas-masthead {
+  background-color: var(--pf-v6-global--BackgroundColor--200);
+  color: var(--pf-v6-global--Color--100);
+}
+
+/*
+ * Filled PatternFly Page main (AppLayout uses isContentFilled → pf-m-fill).
+ * Set the token on the element PF reads + !important so this wins over bundle order.
+ */
+#prototype .pf-v6-c-page__main-container.pf-m-fill {
+  --pf-v6-c-page__main-container--BackgroundColor: rgba(242, 242, 242, 1);
+  background: rgba(242, 242, 242, 1) !important;
+}
+
+/* Scroll surface behind stacked PageSections — otherwise only thin gaps show the container color */
+#prototype #primary-app-container.pf-v6-c-page__main {
+  background-color: rgba(242, 242, 242, 1) !important;
+}
+
+/* Home route: every PageSection uses the same canvas (#f2f2f2 == rgba(242,242,242,1)); white stays on Cards */
+#prototype [data-testid="home-page"] > section.pf-v6-c-page__main-section {
+  background-color: rgba(242, 242, 242, 1) !important;
+}
+
+/* Home — shared section title size (PatternFly global font size md ≈ 1rem) */
+#prototype .rhoai-home-section-title-md {
+  font-size: var(--pf-t--global--font--size--md) !important;
+  line-height: var(--pf-t--global--font--line-height--body);
+}
+
+/* Home — Projects section heading: #FFE8CC circle + standard icon before title */
+#prototype [data-testid="landing-page-projects"] .rhoai-projects-section-heading__icon {
+  flex-shrink: 0;
+}
+
+#prototype [data-testid="landing-page-projects"] .rhoai-projects-section-heading__icon-mark {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#prototype [data-testid="landing-page-projects"] .rhoai-projects-section-heading__icon-mark svg {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+/* Home — Projects gallery: top accent bar (same geometry as Task assistant Gen AI column card) */
+#prototype [data-testid="landing-page-projects"] .rhoai-project-card.pf-v6-c-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#prototype [data-testid="landing-page-projects"] .rhoai-project-card__accent {
+  height: 5px;
+  width: 54px;
+  margin: 0 auto var(--pf-t--global--spacer--md) auto;
+  border-radius: 2px;
+  flex-shrink: 0;
+  background-color: #f8ae54;
+}
+
+/* Custom icon background colors */
+:root {
+  --ai-setup--BackgroundColor: #ffe8cc; /* used for setting up things, like projects and connections */
+  --ai-development--BackgroundColor: #daf2f2; /* used for development resources like workbenches, pipelines, playground, catalog */
+  --ai-deployment--BackgroundColor: #ece6ff; /* used for deployments and use cases that follow, like observe and monitor, registry */
+}
+
+/* AutoRAG specific styles */
+#documents-file-upload .pf-v6-c-multiple-file-upload__main {
+  box-sizing: content-box;
+}
+
+/* Ensure PatternFly checkboxes use brand color (fix black appearance when --pf-t--global--color--brand--default is undefined) */
+#primary-app-container .pf-v6-c-check,
+#primary-app-container .pf-v6-c-check__input,
+#primary-app-container .pf-v6-c-check input[type="checkbox"] {
+  accent-color: #06c;
+}
+
+/* Commenting: visible focus for keyboard users on discussion thread row */
+[data-discussion-thread-row]:focus-visible {
+  outline: 2px solid var(--pf-t--global--color--brand--default);
+  outline-offset: 2px;
+}
+
+/* Discussions tab: force single-column layout so list is below toolbar/Summarize (matches prod) */
+#discussions-tab-root {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+/* Context panel: overflow tabs dropdown shows full tab labels */
+#context-panel-feature-tabs .pf-m-overflow .pf-v6-c-menu__content,
+#context-panel-primary-tabs .pf-m-overflow .pf-v6-c-menu__content {
+  min-width: max-content;
+}
+#context-panel-feature-tabs .pf-m-overflow .pf-v6-c-menu__list,
+#context-panel-primary-tabs .pf-m-overflow .pf-v6-c-menu__list {
+  white-space: nowrap;
+}
+
+/* Prototype Launcher */
+.prototype-launcher-card {
+  border: 1px solid #d2d2d2 !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 8px !important;
+  height: 100% !important;
+}
+#prototype-launcher-toolbar .pf-v6-c-toolbar__content {
+  gap: 0;
+}
+#prototype-launcher-toolbar .pf-v6-c-toolbar__item {
+  margin-inline-end: 0;
+}
+.prototype-launcher-row-e2e,
+.prototype-launcher-row-e2e td {
+  background-color: var(--pf-v6-chart-color-blue-100, #92c5f9) !important;
+}
+.prototype-launcher-card.prototype-launcher-card-e2e {
+  background-color: var(--pf-v6-chart-color-blue-100, #92c5f9) !important;
+}
+
+/* Playground header icon - ensure icon color visible (restored after 3.4 merge) */
+.playground-header .playground-header-icon {
+  color: var(--pf-t--global--text--color--subtle);
+}
+
+/* Playground config panel: no padding so blue header extends edge-to-edge */
+#build-panel-drawer {
+  padding: 0 !important;
+}
+
+/* Push (equal panels) with toggle: Chat title blue when that chat is being configured */
+.playground-page .playground-compare-chat-title-active {
+  color: rgba(0, 102, 204, 1) !important;
+}
+
+/* Push (equal panels) with toggle: Chat 1/2 toggle buttons span full header width */
+.playground-compare-config-header-toggle {
+  padding-right: 8px;
+}
+.playground-compare-config-toggle-wrapper {
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+.playground-compare-config-toggle-wrapper .pf-v6-c-toggle-group {
+  flex: 1;
+  width: 100%;
+}
+.playground-compare-config-toggle-wrapper .pf-v6-c-toggle-group__item {
+  flex: 1;
+}
+.playground-compare-config-toggle-wrapper .pf-v6-c-toggle-group__button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.playground-compare-config-toggle-wrapper .pf-v6-c-toggle-group__button.pf-m-selected {
+  background-color: rgba(0, 102, 204, 1);
+}
+
+/* Playground slider input width - make all slider inputs the same width */
+.slider-fixed-input .pf-v6-c-slider__value .pf-v6-c-form-control {
+  width: 66px !important;
+  min-width: 66px !important;
+}
+
+/* Hide number input spinners/arrows */
+.slider-fixed-input input[type="number"]::-webkit-outer-spin-button,
+.slider-fixed-input input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.slider-fixed-input input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Playground overlay panel toggle button */
+.playground-panel-toggle button:hover {
+  background-color: var(--pf-v6-global--BackgroundColor--200);
+}
+
+/* Ensure DrawerPanelContent has relative positioning for toggle button */
+#build-panel-drawer {
+  position: relative;
+  overflow: visible;
+}
+
+/* Panel toggle button shadow for better visibility */
+#build-panel-drawer .pf-v6-c-button.pf-m-tertiary {
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Playground chatbot white background - scoped to playground for merge safety */
+.playground-page .pf-chatbot-white-bg,
+.playground-page .pf-chatbot-white-bg .pf-chatbot__content,
+.playground-page .pf-chatbot-white-bg .pf-chatbot__messagebox {
+  background-color: #ffffff !important;
+}
+
+/* Push (equal panels) with blue border: blue border around the chat being configured */
+.playground-page .playground-compare-active-chat-border {
+  border: 2px solid rgba(0, 102, 204, 1);
+  border-radius: var(--pf-t--global--BorderRadius--sm);
+  box-sizing: border-box;
+}
+
+/* Push (equal panels) 4: gray background on the chat NOT being configured */
+.playground-page .playground-compare-inactive-chat .pf-chatbot-white-bg,
+.playground-page .playground-compare-inactive-chat .pf-chatbot-white-bg .pf-chatbot__content,
+.playground-page .playground-compare-inactive-chat .pf-chatbot-white-bg .pf-chatbot__messagebox {
+  background-color: var(--pf-t--global--background--color--secondary--default) !important;
+}
+.playground-page .playground-compare-inactive-chat .pf-chatbot-white-bg .pf-chatbot__footer {
+  background-color: var(--pf-t--global--background--color--secondary--default) !important;
+}
+
+/* Playground chatbot footer white background */
+.playground-page .pf-chatbot-white-bg .pf-chatbot__footer {
+  background-color: #ffffff !important;
+}
+
+/* Playground chatbot message bar border - override both element and ::after pseudo-element */
+.playground-page .pf-chatbot-white-bg .pf-chatbot__message-bar {
+  border: 1px solid var(--pf-t--global--border--color--default) !important;
+}
+.playground-page .pf-chatbot-white-bg .pf-chatbot__message-bar::after {
+  border-color: var(--pf-t--global--border--color--default) !important;
+}
+
+/* Playground page - prevent outer scrollbar */
+.playground-page {
+  overflow: hidden !important;
+}
+
+.playground-page .pf-v6-c-page__main-section {
+  overflow: hidden !important;
+}
+
+/* Playground chatbot - hide scrollbar track, only show thumb when scrolling needed */
+.playground-page .pf-chatbot-white-bg .pf-chatbot__content {
+  overflow-y: auto !important;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: transparent transparent; /* Firefox - hide by default */
+}
+
+.playground-page .pf-chatbot-white-bg .pf-chatbot__content:hover {
+  scrollbar-color: var(--pf-t--global--border--color--default) transparent; /* Firefox - show on hover */
+}
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+.playground-page .pf-chatbot-white-bg .pf-chatbot__content::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+.playground-page .pf-chatbot-white-bg .pf-chatbot__content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.playground-page .pf-chatbot-white-bg .pf-chatbot__content::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 3px;
+}
+
+.playground-page .pf-chatbot-white-bg .pf-chatbot__content:hover::-webkit-scrollbar-thumb {
+  background: var(--pf-t--global--border--color--default);
+}
+
+/* Vector stores table - use top border instead of bottom border */
+/* Constrain modal backdrops to the page area when the context panel is open */
+.pf-v6-c-backdrop {
+  inset-inline-start: var(--context-panel-width, 0px) !important;
+  width: calc(100% - var(--context-panel-width, 0px)) !important;
+}
+
+#selected-vector-stores-table tbody tr {
+  border-bottom: none !important;
+}
+
+#selected-vector-stores-table tbody tr td {
+  border-bottom: none !important;
+  border-top: 1px solid var(--pf-t--global--border--color--default) !important;
+}
+
+/* Prompt textarea - fill container height */
+.prompt-textarea-fill {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.prompt-textarea-fill > .pf-v6-c-form-control {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.prompt-textarea-fill > .pf-v6-c-form-control > textarea {
+  flex: 1;
+}
+
+/* Gear icon spin animation for configure panel toggle */
+@keyframes gear-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(90deg); }
+}
+
+.gear-icon-spin {
+  animation: gear-spin 0.3s ease-in-out;
+}
+
+/* Home — Task assistant: section background + translucent card shell */
+#prototype [data-testid="home-task-assistant"] .rhoai-task-assistant-section-root {
+  position: relative;
+  border-radius: var(--pf-t--global--border--radius--medium);
+  overflow: hidden;
+  box-shadow: none;
+}
+
+#prototype [data-testid="home-task-assistant"] .rhoai-task-assistant-section-card.pf-v6-c-card {
+  --pf-v6-c-card--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  background-color: var(--pf-t--global--background--color--primary--default);
+  border: 1px solid var(--pf-t--global--border--color--default);
+  box-shadow: none;
+  position: relative;
+  z-index: 1;
+}
+
+#prototype [data-testid="home-task-assistant"] .rhoai-task-assistant-section-card.pf-v6-c-card::before {
+  content: '';
+  position: absolute;
+  top: auto;
+  left: auto;
+  right: -140px;
+  bottom: -130px;
+  width: 620px;
+  height: 621px;
+  background-image: var(--rhoai-task-assistant-illustration);
+  background-size: 620px 621px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#prototype [data-testid="home-task-assistant"] .rhoai-task-assistant-section-card.pf-v6-c-card.pf-m-expanded::before {
+  opacity: 1;
+}
+
+#prototype
+  [data-testid="home-task-assistant"]
+  .rhoai-task-assistant-section-card.pf-v6-c-card
+  > * {
+  position: relative;
+  z-index: 2;
+}
+
+#prototype [data-testid="home-task-assistant"] .rhoai-task-assistant-section-card.pf-v6-c-card,
+#prototype [data-testid="home-task-assistant"] .rhoai-task-assistant-section-card .pf-v6-c-card__expandable-content,
+#prototype [data-testid="home-task-assistant"] .rhoai-task-assistant-capabilities-body {
+  overflow: hidden;
+}
+
+#prototype
+  [data-testid="home-task-assistant"]
+  .rhoai-task-assistant-section-card.pf-v6-c-card
+  .pf-v6-c-card__header {
+  align-items: flex-start;
+}
+
+#prototype
+  [data-testid="home-task-assistant"]
+  .rhoai-task-assistant-section-card.pf-v6-c-card
+  .pf-v6-c-card__header-toggle,
+#prototype
+  [data-testid="home-task-assistant"]
+  .rhoai-task-assistant-section-card.pf-v6-c-card
+  .pf-v6-c-card__actions {
+  margin-top: 0;
+}
+
+/* Home — Task assistant expanded: inner column cards + accent bar */
+#prototype [data-testid="home-task-assistant"] .rhoai-task-assistant-column-card {
+  position: relative;
+  height: 100%;
+  background: var(--pf-t--global--background--color--primary--default);
+  border: 1px solid var(--pf-t--global--border--color--default);
+  border-radius: var(--pf-t--global--border--radius--medium);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#prototype [data-testid="home-task-assistant"] .rhoai-task-assistant-column-card__accent {
+  height: 5px;
+  width: 54px;
+  margin: 0 auto;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+#prototype
+  [data-testid="home-task-assistant"]
+  .rhoai-task-assistant-column-card[data-accent="ai-hub"]
+  .rhoai-task-assistant-column-card__accent {
+  background-color: #6753ac;
+}
+
+#prototype
+  [data-testid="home-task-assistant"]
+  .rhoai-task-assistant-column-card[data-accent="gen-ai"]
+  .rhoai-task-assistant-column-card__accent {
+  background-color: #ef9234;
+}
+
+#prototype
+  [data-testid="home-task-assistant"]
+  .rhoai-task-assistant-column-card[data-accent="develop"]
+  .rhoai-task-assistant-column-card__accent {
+  background-color: #37a3a3;
+}
+
+#prototype [data-testid="home-task-assistant"] .rhoai-task-assistant-column-card__body {
+  padding: var(--pf-t--global--spacer--md);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--pf-t--global--spacer--sm);
+  min-width: 0;
+}
+
+#prototype [data-testid="home-task-assistant"] .rhoai-task-assistant-column-card__intro {
+  width: 100%;
+  min-width: 0;
+}
+
+#prototype [data-testid="home-task-assistant"] .rhoai-task-assistant-column-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+#prototype [data-testid="home-task-assistant"] .rhoai-task-assistant-column-card__icon-mark {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#prototype [data-testid="home-task-assistant"] .rhoai-task-assistant-column-card__icon-mark svg {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+/* Intro copy lives in CardBody above the grid so it shares body inset and lines up with column cards (e.g. AI hub) */
+#prototype [data-testid="home-task-assistant"] .rhoai-task-assistant-header-body {
+  margin: 0 0 var(--pf-t--global--spacer--sm) 0;
+  padding-left: 0;
+}
+
+#prototype [data-testid="home-task-assistant"] .rhoai-task-assistant-collapsed-labels {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+}
+
+#prototype [data-testid="home-task-assistant"] .rhoai-task-assistant-collapsed-label {
+  border-radius: 9999px;
+}
+
+/* Custom SVG in label icon slot: match PF Icon m-body-lg + keep mark centered with label text on the row */
+#prototype
+  [data-testid="home-task-assistant"]
+  .rhoai-task-assistant-collapsed-label.pf-v6-c-label
+  .pf-v6-c-label__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+#prototype [data-testid="home-task-assistant"] .rhoai-task-assistant-collapsed-label__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+#prototype [data-testid="home-task-assistant"] .rhoai-task-assistant-collapsed-label__icon svg {
+  width: var(--pf-t--global--icon--size--font--body--lg);
+  height: var(--pf-t--global--icon--size--font--body--lg);
+  flex-shrink: 0;
+  display: block;
+}
+
+#prototype
+  [data-testid="home-task-assistant"]
+  .rhoai-task-assistant-section-card.pf-v6-c-card:not(.pf-m-expanded)
+  .pf-v6-c-card__header-toggle {
+  align-self: center;
+}
+
+@media (max-width: 1200px) {
+  #prototype [data-testid="home-task-assistant"] .rhoai-task-assistant-section-card.pf-v6-c-card::before {
+    right: -190px;
+    bottom: -170px;
+  }
+}
+
+#prototype [data-testid="home-enable-your-team"] .rhoai-enable-team-card-icon-shell {
+  flex-shrink: 0;
+}
+
+#prototype [data-testid="home-enable-your-team"] .rhoai-enable-team-card-icon-mark {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#prototype [data-testid="home-enable-your-team"] .rhoai-enable-team-card-icon-mark svg {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+#prototype [data-testid="home-enable-your-team"] .rhoai-enable-team-item-card {
+  height: 100%;
+}

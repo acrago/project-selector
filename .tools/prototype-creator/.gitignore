@@ -1,0 +1,24 @@
+# Pipeline output (per-RFE artifacts)
+.artifacts/
+tmp/
+
+# Fetched context (downloaded at runtime)
+.context/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

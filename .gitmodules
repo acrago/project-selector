@@ -1,0 +1,6 @@
+[submodule ".agents/skills/amplitude-event-tracking"]
+	path = .agents/skills/amplitude-event-tracking
+	url = https://gitlab.cee.redhat.com/ymanor/event-tracking-skill.git
+[submodule ".tools/prototype-creator"]
+	path = .tools/prototype-creator
+	url = https://github.com/andybraren/prototype-creator.git

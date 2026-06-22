@@ -1,0 +1,14 @@
+# Cloudflare Worker for Discussions Summarization (MaaS proxy)
+# Deploy: cd worker && npx wrangler deploy
+# Set secrets: npx wrangler secret put MAAS_API_KEY
+#             npx wrangler secret put MAAS_ENDPOINT_URL  (optional; has default)
+
+name = "rhoai-discussions-summarize"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+# Allow CORS from your GitLab Pages origin(s)
+[vars]
+MAAS_ENDPOINT_URL = "https://llama-3-2-3b-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com"
+
+# MAAS_API_KEY must be set as a secret: npx wrangler secret put MAAS_API_KEY

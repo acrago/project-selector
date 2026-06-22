@@ -1,0 +1,11 @@
+/* Right padding on alert body to balance the left indentation from expand toggle */
+.pf-v6-c-alert.pf-m-expandable .pf-v6-c-alert__description {
+  padding-right: var(--pf-t--global--spacer--xl);
+}
+
+/* Spacing between description text and code block inside alerts */
+.pf-v6-c-alert__description .pf-v6-c-code-block {
+  margin-top: var(--pf-t--global--spacer--md);
+}
+
+

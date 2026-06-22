@@ -1,0 +1,195 @@
+/* Hide the Modal's default close button since WizardHeader provides its own */
+.create-workspace-kind-wizard-modal .pf-v6-c-modal-box__close,
+.create-workspace-kind-wizard-modal .pf-c-modal-box__close {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Also target the button inside the modal close container */
+.create-workspace-kind-wizard-modal .pf-v6-c-modal-box__close button,
+.create-workspace-kind-wizard-modal .pf-c-modal-box__close button {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Ensure modal body doesn't add extra padding */
+.create-workspace-kind-wizard-modal .pf-v6-c-modal-box__body,
+.create-workspace-kind-wizard-modal .pf-c-modal-box__body {
+  padding: 0 !important;
+}
+
+/* Fix empty white space on the right side and maintain consistent modal size */
+.create-workspace-kind-wizard-modal .pf-v6-c-modal-box,
+.create-workspace-kind-wizard-modal .pf-c-modal-box {
+  max-width: 100% !important;
+  width: auto !important;
+  height: 80vh !important;
+  min-height: 80vh !important;
+  max-height: 80vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+}
+
+.create-workspace-kind-wizard-modal .pf-v6-c-modal-box__body,
+.create-workspace-kind-wizard-modal .pf-c-modal-box__body {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  height: calc(80vh - 120px) !important;
+  max-height: calc(80vh - 120px) !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  box-sizing: border-box !important;
+}
+
+.create-workspace-kind-wizard-modal .pf-v6-c-wizard,
+.create-workspace-kind-wizard-modal .pf-c-wizard {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  max-height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+}
+
+/* Make content scrollable while keeping footer persistent */
+.create-workspace-kind-wizard-modal .pf-v6-c-wizard__outer-wrap,
+.create-workspace-kind-wizard-modal .pf-c-wizard__outer-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  overflow: hidden !important;
+  min-height: 0 !important;
+}
+
+.create-workspace-kind-wizard-modal .pf-v6-c-wizard__inner-wrap,
+.create-workspace-kind-wizard-modal .pf-c-wizard__inner-wrap {
+  display: flex !important;
+  flex-direction: row !important;
+  flex: 1 1 auto !important;
+  overflow: hidden !important;
+  min-height: 0 !important;
+}
+
+.create-workspace-kind-wizard-modal .pf-v6-c-wizard__main,
+.create-workspace-kind-wizard-modal .pf-c-wizard__main {
+  flex: 1 1 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  min-height: 0 !important;
+}
+
+.create-workspace-kind-wizard-modal .pf-v6-c-wizard__main-body,
+.create-workspace-kind-wizard-modal .pf-c-wizard__main-body {
+  flex: 1 1 auto !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+  max-height: 100% !important;
+}
+
+/* Ensure step content can scroll when needed */
+.create-workspace-kind-wizard-modal .pf-v6-c-wizard__main-body > div,
+.create-workspace-kind-wizard-modal .pf-c-wizard__main-body > div {
+  overflow: visible !important;
+  max-height: none !important;
+}
+
+/* Keep footer persistent */
+.create-workspace-kind-wizard-modal .pf-v6-c-wizard__footer,
+.create-workspace-kind-wizard-modal .pf-c-wizard__footer {
+  flex-shrink: 0 !important;
+}
+
+/* Remove extra space after wizard header and ensure vertical divider extends to bottom */
+.create-workspace-kind-wizard-modal .pf-v6-c-wizard__outer-wrap,
+.create-workspace-kind-wizard-modal .pf-c-wizard__outer-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  overflow: hidden !important;
+  min-height: 0 !important;
+  max-height: 100% !important;
+}
+
+.create-workspace-kind-wizard-modal .pf-v6-c-wizard__inner-wrap,
+.create-workspace-kind-wizard-modal .pf-c-wizard__inner-wrap {
+  flex: 1 1 auto !important;
+  overflow: hidden !important;
+  min-height: 0 !important;
+  max-height: 100% !important;
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+/* Ensure the nav (left sidebar) extends to bottom */
+.create-workspace-kind-wizard-modal .pf-v6-c-wizard__nav,
+.create-workspace-kind-wizard-modal .pf-c-wizard__nav {
+  align-self: stretch !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  max-height: 100% !important;
+}
+
+/* Ensure the main content area extends to bottom and maintains consistent size */
+.create-workspace-kind-wizard-modal .pf-v6-c-wizard__main,
+.create-workspace-kind-wizard-modal .pf-c-wizard__main {
+  flex: 1 1 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  min-height: 0 !important;
+  max-height: 100% !important;
+}
+
+/* Ensure wizard main body maintains consistent height across steps and is scrollable */
+.create-workspace-kind-wizard-modal .pf-v6-c-wizard__main-body,
+.create-workspace-kind-wizard-modal .pf-c-wizard__main-body {
+  display: flex !important;
+  flex-direction: column !important;
+  max-height: 100% !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  -webkit-overflow-scrolling: touch !important;
+  box-sizing: border-box !important;
+}
+
+/* Ensure step content divs stretch to fill available height and don't interfere with scrolling */
+.create-workspace-kind-wizard-modal .pf-v6-c-wizard__main-body > div,
+.create-workspace-kind-wizard-modal .pf-c-wizard__main-body > div {
+  overflow: visible !important;
+  max-height: none !important;
+  min-height: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Reduce spacing between connection type checkboxes in step 4 */
+.create-workspace-kind-wizard-modal #connection-types-grid {
+  gap: 0.5rem !important;
+  row-gap: 0.5rem !important;
+}
+
+.create-workspace-kind-wizard-modal #connection-types-grid .pf-v6-l-grid__item,
+.create-workspace-kind-wizard-modal #connection-types-grid .pf-l-grid__item {
+  margin-bottom: 0.5rem !important;
+  margin-right: 0.5rem !important;
+}

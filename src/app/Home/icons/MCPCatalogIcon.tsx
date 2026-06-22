@@ -1,0 +1,61 @@
+import * as React from 'react';
+
+interface MCPCatalogIconProps {
+  /** Whether to include the background styling */
+  withBackground?: boolean;
+  /** Custom size for the icon (default: 32px) */
+  size?: number;
+  /** Custom background color (overrides CSS variable) */
+  backgroundColor?: string;
+  /** Additional CSS class name */
+  className?: string;
+}
+
+export const MCPCatalogIcon: React.FunctionComponent<MCPCatalogIconProps> = ({
+  withBackground = false,
+  size = 32,
+  backgroundColor,
+  className = '',
+}) => {
+  const iconSvg = (
+    <svg
+      className={`pf-v6-svg ${!withBackground ? className : ''}`}
+      viewBox="0 0 36 36"
+      fill="currentColor"
+      aria-hidden="true"
+      role="img"
+      width="1em"
+      height="1em"
+      style={{ width: `${size}px`, height: `${size}px` }}
+    >
+      <g>
+        <path d="M31,4.38H5A.62.62,0,0,0,4.38,5v6a.62.62,0,0,0,.62.62h8a.62.62,0,0,0,0-1.24H5.62V5.62H30.38v4.76H22a.62.62,0,0,0,0,1.24h9a.62.62,0,0,0,.62-.62V5A.62.62,0,0,0,31,4.38Z"/>
+        <path d="M6.94,19.38H5.62V14.62H13a.62.62,0,0,0,0-1.24H5a.62.62,0,0,0-.62.62v6a.62.62,0,0,0,.62.62H6.94A.62.62,0,0,0,6.94,19.38Z"/>
+        <path d="M31,13.38H22a.62.62,0,0,0,0,1.24h9A.62.62,0,0,0,31,13.38Z"/>
+        <path d="M28.14,18.39,19.62,16.5v-6a2.12,2.12,0,0,0-4.24,0V21c-1.11-1.41-2.54-2.81-3.88-2.81a2.12,2.12,0,0,0-1.22,3.86,2.84,2.84,0,0,1,1.1,2C13,34.67,28.33,33.78,28.62,23V19A.62.62,0,0,0,28.14,18.39ZM27.38,23c-.23,9.21-13.4,10-14.76.92A4.1,4.1,0,0,0,11,21.05a.87.87,0,0,1,.5-1.58c.89,0,2.49,1.55,4,3.87A.63.63,0,0,0,16.62,23V10.5a.88.88,0,0,1,1.76,0V17a.62.62,0,0,0,.48.61l8.52,1.89Z"/>
+      </g>
+    </svg>
+  );
+
+  if (withBackground) {
+    const containerSize = size + 8;
+    const backgroundStyle: React.CSSProperties = {
+      background: backgroundColor || '#daf2f2',
+      borderRadius: '20px',
+      padding: '4px',
+      width: `${containerSize}px`,
+      height: `${containerSize}px`,
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    };
+
+    return (
+      <div style={backgroundStyle} className={className}>
+        {iconSvg}
+      </div>
+    );
+  }
+
+  return iconSvg;
+};

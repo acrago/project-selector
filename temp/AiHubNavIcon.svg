@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="hub" xmlns="http://www.w3.org/2000/svg" width="32" height="32" version="1.1" viewBox="0 0 32 32">
+  <!-- Generator: Adobe Illustrator 30.1.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 136)  -->
+  <title>rh-ui-icon-hub</title>
+<desc>center, network, connection, central, distribution, router, focus, core, switch, hardware, link, intersection, junction, assembly, portal, integration, point, spoke, collective, gateway</desc>
+<metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 8.0-c001 1.000000, 0000/00/00-00:00:00        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:tiff="http://ns.adobe.com/tiff/1.0/"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:xmp="http://ns.adobe.com/xap/1.0/">
+         <tiff:ImageLength>32</tiff:ImageLength>
+         <tiff:ImageWidth>32</tiff:ImageWidth>
+         <dc:format>image/svg+xml</dc:format>
+         <dc:modified>2026-01-20T14:41:14.764Z</dc:modified>
+         <dc:title>
+            <rdf:Alt>
+               <rdf:li xml:lang="x-default">rh-ui-icon-hub</rdf:li>
+            </rdf:Alt>
+         </dc:title>
+         <dc:description>
+            <rdf:Alt>
+               <rdf:li xml:lang="x-default">center, network, connection, central, distribution, router, focus, core, switch, hardware, link, intersection, junction, assembly, portal, integration, point, spoke, collective, gateway</rdf:li>
+            </rdf:Alt>
+         </dc:description>
+         <xmp:brand-content-type>Icon</xmp:brand-content-type>
+         <xmp:brand-content-subtype>UI</xmp:brand-content-subtype>
+         <xmp:rhcc-rights-restricted>no</xmp:rhcc-rights-restricted>
+         <xmp:rhcc-file-last-modified>2026-01-20T14:37:38.356Z</xmp:rhcc-file-last-modified>
+         <xmp:brand-colorway>
+            <rdf:Bag>
+               <rdf:li>colorway:black</rdf:li>
+            </rdf:Bag>
+         </xmp:brand-colorway>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                            
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .st0 {
+        fill: none;
+      }
+
+      .st1 {
+        fill: #151515;
+      }
+    </style>
+  </defs>
+  <path id="icon" class="st1" d="M8.5,2H3.5c-.82715,0-1.5.67285-1.5,1.5v5c0,.82715.67285,1.5,1.5,1.5h5c.82715,0,1.5-.67285,1.5-1.5V3.5c0-.82715-.67285-1.5-1.5-1.5ZM8,8h-4v-4h4v4ZM28.5,2h-5c-.82715,0-1.5.67285-1.5,1.5v5c0,.82715.67285,1.5,1.5,1.5h5c.82715,0,1.5-.67285,1.5-1.5V3.5c0-.82715-.67285-1.5-1.5-1.5ZM28,8h-4v-4h4v4ZM8.5,22H3.5c-.82715,0-1.5.67285-1.5,1.5v5c0,.82715.67285,1.5,1.5,1.5h5c.82715,0,1.5-.67285,1.5-1.5v-5c0-.82715-.67285-1.5-1.5-1.5ZM8,28h-4v-4h4v4ZM28.5,22h-5c-.82715,0-1.5.67285-1.5,1.5v5c0,.82715.67285,1.5,1.5,1.5h5c.82715,0,1.5-.67285,1.5-1.5v-5c0-.82715-.67285-1.5-1.5-1.5ZM28,28h-4v-4h4v4ZM18.98633,4.33203c-.08203.48828-.50586.83398-.98535.83398-.05469,0-.11035-.00488-.16699-.01367-1.20117-.20312-2.4668-.20312-3.66797,0-.55469.08301-1.06152-.27637-1.15234-.82031-.0918-.54492.27539-1.06055.82031-1.15234,1.41992-.23828,2.91211-.23828,4.33203,0,.54492.0918.91211.60742.82031,1.15234ZM5.15234,14.16602c-.10156.60059-.15234,1.21777-.15234,1.83398s.05078,1.2334.15234,1.83398c.0918.54492-.27539,1.06055-.82031,1.15234-.05664.00879-.1123.01367-.16699.01367-.47949,0-.90332-.3457-.98535-.83398-.11914-.70996-.17969-1.43848-.17969-2.16602s.06055-1.45605.17969-2.16602c.09082-.54395.59766-.90527,1.15234-.82031.54492.0918.91211.60742.82031,1.15234ZM18.98633,27.66797c.0918.54492-.27539,1.06055-.82031,1.15234-.70996.11914-1.43848.17969-2.16602.17969s-1.45605-.06055-2.16602-.17969c-.54492-.0918-.91211-.60742-.82031-1.15234.09082-.54395.59863-.9082,1.15234-.82031,1.20117.20312,2.4668.20312,3.66797,0,.55176-.08789,1.06055.27637,1.15234.82031ZM26.84766,17.83398c.10156-.60059.15234-1.21777.15234-1.83398s-.05078-1.2334-.15234-1.83398c-.0918-.54492.27539-1.06055.82031-1.15234.55273-.08594,1.06055.27637,1.15234.82031.11914.70996.17969,1.43848.17969,2.16602s-.06055,1.45605-.17969,2.16602c-.08203.48828-.50586.83398-.98535.83398-.05469,0-.11035-.00488-.16699-.01367-.54492-.0918-.91211-.60742-.82031-1.15234Z"/>
+  <rect id="Transparent_rectangle" class="st0" width="32" height="32"/>
+</svg>

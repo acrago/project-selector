@@ -1,0 +1,43 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Input Layer -->
+  <circle cx="30" cy="30" r="8" fill="#000" />
+  <circle cx="30" cy="75" r="8" fill="#000" />
+  <circle cx="30" cy="120" r="8" fill="#000" />
+
+  <!-- Hidden Layer -->
+  <circle cx="100" cy="20" r="8" fill="#000" />
+  <circle cx="100" cy="60" r="8" fill="#000" />
+  <circle cx="100" cy="100" r="8" fill="#000" />
+  <circle cx="100" cy="140" r="8" fill="#000" />
+
+  <!-- Output Layer -->
+  <circle cx="170" cy="50" r="8" fill="#000" />
+  <circle cx="170" cy="110" r="8" fill="#000" />
+
+  <!-- Connections -->
+  <!-- Input to Hidden -->
+  <line x1="30" y1="30" x2="100" y2="20" stroke="#000" />
+  <line x1="30" y1="30" x2="100" y2="60" stroke="#000" />
+  <line x1="30" y1="30" x2="100" y2="100" stroke="#000" />
+  <line x1="30" y1="30" x2="100" y2="140" stroke="#000" />
+
+  <line x1="30" y1="75" x2="100" y2="20" stroke="#000" />
+  <line x1="30" y1="75" x2="100" y2="60" stroke="#000" />
+  <line x1="30" y1="75" x2="100" y2="100" stroke="#000" />
+  <line x1="30" y1="75" x2="100" y2="140" stroke="#000" />
+
+  <line x1="30" y1="120" x2="100" y2="20" stroke="#000" />
+  <line x1="30" y1="120" x2="100" y2="60" stroke="#000" />
+  <line x1="30" y1="120" x2="100" y2="100" stroke="#000" />
+  <line x1="30" y1="120" x2="100" y2="140" stroke="#000" />
+
+  <!-- Hidden to Output -->
+  <line x1="100" y1="20" x2="170" y2="50" stroke="#000" />
+  <line x1="100" y1="20" x2="170" y2="110" stroke="#000" />
+  <line x1="100" y1="60" x2="170" y2="50" stroke="#000" />
+  <line x1="100" y1="60" x2="170" y2="110" stroke="#000" />
+  <line x1="100" y1="100" x2="170" y2="50" stroke="#000" />
+  <line x1="100" y1="100" x2="170" y2="110" stroke="#000" />
+  <line x1="100" y1="140" x2="170" y2="50" stroke="#000" />
+  <line x1="100" y1="140" x2="170" y2="110" stroke="#000" />
+</svg>

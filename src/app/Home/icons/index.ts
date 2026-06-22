@@ -1,0 +1,17 @@
+export { PipelinesIcon } from './PipelinesIcon';
+export { ModelCatalogIcon } from './ModelCatalogIcon';
+export { ModelRegistryIcon } from './ModelRegistryIcon';
+export { DeploymentsIcon } from './DeploymentsIcon';
+export { PlaygroundIcon } from './PlaygroundIcon';
+export { WorkbenchesIcon } from './WorkbenchesIcon';
+export { FeatureStoreIcon } from './FeatureStoreIcon';
+export { EvaluationsIcon } from './EvaluationsIcon';
+export { ExperimentsIcon } from './ExperimentsIcon';
+export { KnowledgeSourcesIcon } from './KnowledgeSourcesIcon';
+export { AutoRAGIcon } from './AutoRAGIcon';
+export { PromptLabIcon } from './PromptLabIcon';
+export { AIAssetEndpointsIcon } from './AIAssetEndpointsIcon';
+export { APIKeysIcon } from './APIKeysIcon';
+export { MCPIcon } from './MCPIcon';
+export { MCPCatalogIcon } from './MCPCatalogIcon';
+export { ModelRegistryIconNew } from './ModelRegistryIconNew';
